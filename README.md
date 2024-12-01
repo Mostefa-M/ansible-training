@@ -34,3 +34,8 @@ And most importantly to make change on the MASTER Branch on the  actual README.m
 
 git push origin main 
 
+
+
+We create file called "inventory" that will contain all IP addresses of the server we want to manage.
+Then use git add inventory, git commit -m "First version of the inventory".
+
