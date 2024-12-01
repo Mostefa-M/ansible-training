@@ -40,7 +40,7 @@ We create file called "inventory" that will contain all IP addresses of the serv
 Then use git add inventory, git commit -m "First version of the inventory".
 
 To make sure that all servers are reachable we run this command 
-ansible all --key-file ~/.ssh/id_ed25519 -i /home/mostefa/ansible-training/inventory -m ping
+"ansible all --key-file ~/.ssh/id_ed25519 -i /home/mostefa/ansible-training/inventory -m ping"
 
 
 
