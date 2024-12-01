@@ -27,6 +27,10 @@ With "git add README.md" it will make changes available on the README.md locally
 
 If we do again "git status we will see modified: README.md in green color.
 
-With "git commit -m "update readme file, initial commit" we will make change on the actual README.md on our GitHub repository 
+With "git commit -m "update readme file, initial commit" we will validate the change on the README.md
 the "-m" option  is to write message to the commit.
+
+And most importantly to make change on the MASTER Branch on the  actual README.md on our GitHub repository we need to used this following command
+
+git push origin main 
 
