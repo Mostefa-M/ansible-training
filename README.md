@@ -13,7 +13,7 @@ we choose clone ssh and we copy the link git@github.com:Mostefa-M/ansible-traini
 On the Ansible Control-Host (server5) we type " git clone" and we paste the link from GitHub clone SSH
 So it should looks like this : sudo git clone git@github.com:Mostefa-M/ansible-training.git" and press "yes"
 
-A directory named after the name we choose wiil be create with that README.md"
+A directory named after the name we choose will be create with that README.md"
 
 We need also to provide a name and and email address otherwise we will get errors"
 To do that we type:
