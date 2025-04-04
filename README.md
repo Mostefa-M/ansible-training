@@ -49,4 +49,6 @@ We insert as follow
 inventory = inventory
 private_key_file= ~/.ssh/id_ed25519
 
+This is a new line
+
 
