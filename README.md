@@ -53,4 +53,9 @@ We insert as follow
 inventory = inventory
 private_key_file= /root/.ssh/ansible_key.pub 
 
+So by typing the command:
+ansible all -m ping 
+
+We will get the same result as the previous command because ansible will check inside the local ansible.cfg and will found the name of the inventory that
+is also named inventory and the path for the public key.
 
