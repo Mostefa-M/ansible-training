@@ -41,7 +41,7 @@ Then use git add inventory, git commit -m "First version of the inventory".
 
 To make sure that all servers are reachable we run this command 
 ansible all --key-file /root/.ssh/ansible_key.pub  -i /root/ansible-training/inventory -m ping
-
+(explanation we run the ansible command against all, we use the path of the public key, -i is to specify the inventory file path, -m is for choosing the module ping that will make a real ssh connection to test the connectivity).
 
 We shorten the command by creating inside the repository on the local machine  a file called "ansible.cfg"
 We insert as follow
