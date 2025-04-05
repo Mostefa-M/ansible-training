@@ -39,8 +39,11 @@ git push origin main
 We create file called "inventory" that will contain all IP addresses of the server we want to manage.
 Then use git add inventory, git commit -m "First version of the inventory".
 
+
 To make sure that all servers are reachable we run this command 
+
 ansible all --key-file /root/.ssh/ansible_key.pub  -i /root/ansible-training/inventory -m ping
+
 (explanation we run the ansible command against all, we use the path of the public key, -i is to specify the inventory file path, -m is for choosing the module ping that will make a real ssh connection to test the connectivity).
 
 We shorten the command by creating inside the repository on the local machine  a file called "ansible.cfg"
@@ -48,6 +51,6 @@ We insert as follow
 [defaults]
 
 inventory = inventory
-private_key_file= ~/.ssh/id_ed25519
+private_key_file= /root/.ssh/ansible_key.pub 
 
 
