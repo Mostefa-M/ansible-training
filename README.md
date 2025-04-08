@@ -81,3 +81,13 @@ For each host, it will attempt to run the dnf module with the update_cache=true 
 Because of the --become flag, Ansible will try to execute this command with elevated privileges (usually as root).
 The --ask-become-pass flag will cause Ansible to prompt you on your control machine to enter the sudo (or other privilege escalation) password. You will need to enter this password for Ansible to successfully execute the dnf update --refresh (or equivalent) command on the remote hosts.
 This command is commonly used as a preliminary step in Ansible playbooks or ad-hoc commands to ensure that the managed hosts have an up-to-date package cache before installing, updating, or removing software.
+.................................................................................................
+
+ansible all -m dnf -a name=tmux --become --ask-become-pass
+(will install the Tmux package on all host)
+............................
+
+ansible all -m dnf -a name=tmux state=absent --become --ask-become-pass
+(will remove the Tmux package on all host)
+
+
