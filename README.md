@@ -63,4 +63,21 @@ ansible all --list-hosts (shows us the numbers of hosts) must be run inside the 
 ansible all -m gather_facts (Gathered all information related to the Remote Servers).
 ansible all -m gather_facts --limit 192.168.1.91  (Gathered all information related to one specific server).
 
+...............................................................................................
+
 ansible all -m dnf -a update_cache=true --become --ask-become-pass
+
+This Ansible command does the following:
+
+ansible all: Targets all hosts defined in your Ansible inventory.
+-m dnf: Specifies the dnf module to be used. This module is used to manage packages on systems that use the DNF package manager (like Fedora, CentOS 8+, RHEL 8+).
+-a update_cache=true: Passes the argument update_cache=true to the dnf module. This tells DNF to update its package cache, ensuring it has the latest information about available packages.
+--become: Instructs Ansible to use privilege escalation (like sudo or other configured methods) to execute the task as a different user, typically root.
+--ask-become-pass: Tells Ansible to prompt you for the password required for privilege escalation (the become password, often your sudo password).
+In summary, when you run this command:
+
+Ansible will connect to all the hosts listed in your inventory.
+For each host, it will attempt to run the dnf module with the update_cache=true argument.
+Because of the --become flag, Ansible will try to execute this command with elevated privileges (usually as root).
+The --ask-become-pass flag will cause Ansible to prompt you on your control machine to enter the sudo (or other privilege escalation) password. You will need to enter this password for Ansible to successfully execute the dnf update --refresh (or equivalent) command on the remote hosts.
+This command is commonly used as a preliminary step in Ansible playbooks or ad-hoc commands to ensure that the managed hosts have an up-to-date package cache before installing, updating, or removing software.
