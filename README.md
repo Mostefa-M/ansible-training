@@ -95,3 +95,5 @@ ansible all -m dnf -a name=tmux state=absent --become --ask-become-pass
 (will remove the Tmux package on all host)
 
 
+ansible all -m dnf -a name=tuned state=latest --become --ask-become-pass
+(This command is to update the tuned package to the latest version) 
