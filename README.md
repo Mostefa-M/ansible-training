@@ -58,7 +58,11 @@ ansible all -m ping
 
 We will get the same result as the previous command because ansible will check inside the local ansible.cfg and will found the name of the inventory that
 is also named inventory and the path for the public key.
+
 ..........................................................................................................................................................
+AD-HOC COMMANDS:
+...............................
+
 ansible all --list-hosts (shows us the numbers of hosts) must be run inside the GitHub repository folder 
 ansible all -m gather_facts (Gathered all information related to the Remote Servers).
 ansible all -m gather_facts --limit 192.168.1.91  (Gathered all information related to one specific server).
