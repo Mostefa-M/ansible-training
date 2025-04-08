@@ -63,12 +63,4 @@ ansible all --list-hosts (shows us the numbers of hosts) must be run inside the 
 ansible all -m gather_facts (Gathered all information related to the Remote Servers).
 ansible all -m gather_facts --limit 192.168.1.91  (Gathered all information related to one specific server).
 
-
-
-
-
-
-
-
-
-
+ansible all -m dnf -a update_cache=true --become --ask-become-pass
